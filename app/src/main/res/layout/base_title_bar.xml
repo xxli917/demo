@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <com.lixiaoxue.demolxx.widget.StatusBar
+
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        app:left_image="@mipmap/ic_back"
+        app:title_color="@color/black"
+        app:title_size="20sp"
+        app:title_text="标题">
+
+    </com.lixiaoxue.demolxx.widget.StatusBar>
+    <FrameLayout
+        android:id="@+id/fl_root_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

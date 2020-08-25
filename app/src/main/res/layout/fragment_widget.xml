@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/car_plate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_bar"
+        android:text="车牌输入" />
+
+    <com.lixiaoxue.demolxx.widget.DrawableView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+         />
+
+
+    <com.lixiaoxue.demolxx.widget.LicensePlateView
+        android:id="@+id/plate_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/car_plate"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+
+        />
+
+    <com.lixiaoxue.demolxx.widget.StatusBar
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        app:left_image="@mipmap/ic_back"
+        app:right_size="16sp"
+        app:right_text="搜索"
+        app:title_color="@color/black"
+        app:title_size="20sp"
+        app:title_text="首页">
+
+    </com.lixiaoxue.demolxx.widget.StatusBar>
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="200dp"
+
+        />
+    <com.lixiaoxue.demolxx.widget.BeerView
+        android:id="@+id/beer_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/color_58A6FF"
+        android:layout_below="@id/seekBar"
+        android:layout_marginTop="20dp"
+        />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pull_to_refresh_second_anim"
+        android:layout_below="@id/beer_view"
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="美团"
+        android:layout_below="@id/imageView"
+
+        />
+
+    <Button
+        android:id="@+id/animate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="动画效果"
+        android:layout_below="@id/button"
+        android:layout_marginTop="@dimen/dp15"
+
+        />
+    <Button
+        android:id="@+id/swipe_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载数据"
+        android:layout_below="@id/button"
+        android:layout_marginTop="@dimen/dp15"
+
+        />
+
+
+
+
+</RelativeLayout>

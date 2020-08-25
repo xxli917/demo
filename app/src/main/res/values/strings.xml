@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">demolxx</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="materal_describe">"
+        CoordinatorLayout\n
+        AppBarLayout\n
+        CollapsingToolbarLayout\n
+        TabLayout\n
+        ToolBar\n
+        Snackbar\n
+        FloatingActionButton\n
+        TextInputEditText
+        "</string>
+
+    <string name="normal_style">普通样式</string>
+    <string name="zhihu_style">仿知乎样式</string>
+
+    <string name="reload_text">reload data</string>
+
+    <string name="custom_loading_text">加载中</string>
+
+    <string name="custom_empty_text">暂无数据</string>
+    <string name="custom_error_text">加载失败，请稍后重试</string>
+    <string name="custom_nonetwork_text">似乎出了点问题...</string>
+    <string name="custom_reloadBtn_text">重新加载</string>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/item_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@android:color/transparent"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        >
+        <TextView
+            android:id="@+id/item_code_iv1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/f0f1f3_radius4_rect"
+            android:textSize="18sp"
+            android:textColor="#051C3E"
+
+            android:gravity="center"
+
+            />
+        <TextView
+            android:id="@+id/item_code_iv2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/f0f1f3_radius4_rect"
+            android:textSize="18sp"
+            android:textColor="#051C3E"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp15"
+
+            />
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:text="·"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#051C3E"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/item_code_iv3"
+                android:layout_height="34dp"
+                android:layout_width="match_parent"
+                android:hint="输入车牌号"
+                android:textColorHint="@color/color_909BAD"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#051C3E"
+                android:paddingLeft="10dp"
+
+                />
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F1F3"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

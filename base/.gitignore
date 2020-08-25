@@ -1,0 +1,11 @@
+/build
+/debug
+/release
+*.git
+*.iml
+/.idea
+/.gradle
+/androidTest
+/test
+*.properties
+*.apk

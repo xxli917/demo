@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-aspectjx' //添加
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.lixiaoxue.demolxx"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions { exclude 'META-INF/rxjava.properties' }
+
+    //java8才支持静态接口方法
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':base')
+    implementation project(':licenseplateview')
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    //高版本才有MotionLayout
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
+
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    // RxAndroid
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    // Retrofit库
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    implementation 'com.ganxin.library:loaddatalayout:1.0.1'
+   // implementation 'com.github.liys666666:DoubleClick:V3.0.0'  //添加
+
+    implementation 'androidx.preference:preference:1.1.0-alpha04'
+
+    //EncryptedSharedPreferences
+    implementation 'androidx.security:security-crypto:1.0.0-alpha02'
+
+
+
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

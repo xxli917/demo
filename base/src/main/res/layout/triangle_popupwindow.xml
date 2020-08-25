@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="118dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/dp_10"
+    >
+    <com.nucarf.base.widget.TriangleView
+        android:id="@+id/triangle_view"
+        android:layout_width="@dimen/dp_10"
+        android:layout_height="@dimen/dp_10"
+        app:tv_color="@color/color_333333"
+        app:tv_direction="top"
+        app:tv_resolutionHeight="@dimen/dp_10"
+        app:tv_resolutionWidth="@dimen/dp_10"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="15dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/b33333_20radius_rect"
+        android:padding="10dp"
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

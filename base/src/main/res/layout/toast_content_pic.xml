@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="210dp"
+        android:layout_height="146dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialogcorner"
+        android:minWidth="210dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15"
+            >
+
+            <ImageView
+                android:id="@+id/icon_iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/icon_toast_error" />
+
+            <TextView
+                android:id="@+id/toast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="网络异常" />
+
+            <TextView
+                android:id="@+id/disc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible"
+                android:gravity="center_horizontal"
+                tools:text="暂时无法查询到交易结果，请在网络回复后前往订单列表查看" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

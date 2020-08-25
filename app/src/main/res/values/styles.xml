@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_1560DC</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:selectableItemBackground">@null</item>
+        <item name="android:selectableItemBackgroundBorderless" tools:targetApi="lollipop">@null
+        </item>
+    </style>
+
+    <style name="AppThemeLaucher" parent="FullScreen">
+        <item name="android:windowBackground">@mipmap/ic_boot</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+
+
+    </style>
+
+    <style name="FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="OurTextInputHint"></style>
+
+
+
+</resources>

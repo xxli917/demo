@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp71">
+
+
+    <!-- 白色背景 -->
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/bottom_layout"
+        android:background="@color/white"
+        android:elevation="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+
+
+        >
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_item_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="6dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/menu_bottom_size"
+                android:layout_height="@dimen/menu_bottom_size"
+                android:src="@drawable/menu_home_selecter" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4px"
+                android:text="@string/str_bottom_item_first"
+                android:textColor="@color/color_tab_text"
+                android:textSize="@dimen/m11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_item_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="6dp"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/menu_bottom_size"
+                android:layout_height="@dimen/menu_bottom_size"
+                android:src="@drawable/menu_card_selecter" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/str_bottom_item_card"
+                android:textColor="@color/color_tab_text"
+                android:textSize="@dimen/m11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_item_oil_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/menu_scan_selecter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_item_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ll_bottom_item_oil_code"
+            android:layout_toRightOf="@id/ll_bottom_item_oil_code"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:layout_width="@dimen/menu_bottom_size"
+                android:layout_height="@dimen/menu_bottom_size"
+                android:src="@drawable/menu_order_second" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/str_bottom_item_order"
+                android:textColor="@color/color_tab_text"
+                android:textSize="@dimen/m11" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_item_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:layout_width="@dimen/menu_bottom_size"
+                android:layout_height="@dimen/menu_bottom_size"
+                android:src="@drawable/menu_my_selecter" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/str_bottom_item_my"
+                android:textColor="@color/color_tab_text"
+                android:textSize="@dimen/m11" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

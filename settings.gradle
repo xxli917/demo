@@ -1,0 +1,3 @@
+include ':licenseplateview'
+include ':app', ':base', ':autosize'
+rootProject.name='demolxx'

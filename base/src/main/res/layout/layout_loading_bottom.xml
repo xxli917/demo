@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="120dp"
+    android:layout_height="70dp"
+    android:background="@drawable/dialogcorner"
+    android:gravity="center"
+    >
+    <ProgressBar
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:indeterminateTint="@color/white"
+        android:indeterminateTintMode="src_atop"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请稍后…"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>

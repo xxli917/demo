@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="m1">1px</dimen>
+    <dimen name="menu_bottom_size">20dp</dimen>
+    <dimen name="m11">11sp</dimen>
+    <dimen name="m100">100px</dimen>
+    <dimen name="padding10">10dp</dimen>
+    <dimen name="m51">51px</dimen>
+    <dimen name="m102">102mm</dimen>
+    <dimen name="m4">4mm</dimen>
+    <dimen name="m27">27mm</dimen>
+    <dimen name="dp71">71dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp05">0.5dp</dimen>
+
+
+    <!-- 顶部按钮栏高度 -->
+
+
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+
+    <!-- 顶部按钮padding -->
+
+
+    <dimen name="pickerview_topbar_padding">20dp</dimen>
+
+    <!-- 顶部按钮文字大小 -->
+
+
+    <dimen name="pickerview_topbar_btn_textsize">17sp</dimen>
+
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+
+    <!-- 选项文字大小 -->
+
+
+    <dimen name="pickerview_textsize">20sp</dimen>
+</resources>

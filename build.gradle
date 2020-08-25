@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.novoda:bintray-release:0.8.0'
+        //classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.4'
+
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+        
+    }
+}
+ext {
+    compileSdkVersion = 28
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    buildToolsVersion = '28.0.3'
+    appTargetSdkVersion = 28
+    versionCode = 1
+    versionName = "1.6.0.1"//(internalTest)
+    appcompat = "androidx.appcompat:appcompat:1.0.0"
+
+    sdkSourceCompatibility = JavaVersion.VERSION_1_8
+    sdkTargetCompatibility = JavaVersion.VERSION_1_8
+    appSourceCompatibility = JavaVersion.VERSION_1_8
+    appTargetCompatibility = JavaVersion.VERSION_1_8
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

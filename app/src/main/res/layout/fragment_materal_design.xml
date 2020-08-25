@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#是由Google推出的全新的设计语言" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/materal_describe" />
+
+            <TextView
+                android:id="@+id/main_view"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="商户端首页"
+                />
+            <TextView
+                android:id="@+id/app_view"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="AppBarLayout"
+                />
+            <TextView
+                android:id="@+id/login_view"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="登录"
+                />
+
+
+            <TextView
+                android:id="@+id/motion_editor"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="MotionLayout"
+                />
+
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="dialog"
+                />
+
+            <TextView
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="toolbar"
+                />
+
+            <TextView
+                android:id="@+id/bottom_sheet"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="BottomSheet"
+                />
+            <TextView
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="setting_preferences"/>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>
