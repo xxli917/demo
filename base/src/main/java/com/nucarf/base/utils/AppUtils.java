@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Looper;
 import android.telephony.TelephonyManager;
 
 import java.util.ArrayList;
@@ -111,6 +112,16 @@ public class AppUtils {
     }
 
 
+    public static boolean isOnMainThread() {
+        return Looper.myLooper() == Looper.getMainLooper();
+    }
+
+    /**
+     * Returns {@code true} if called on a background thread, {@code false} otherwise.
+     */
+    public static boolean isOnBackgroundThread() {
+        return !isOnMainThread();
+    }
 
 
 

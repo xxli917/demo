@@ -1,6 +1,9 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    ext {
+        kotlin_version = '1.4.0'
+    }
     repositories {
         google()
         jcenter()
@@ -9,8 +12,9 @@ buildscript {
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath 'com.android.tools.build:gradle:4.1.1'
         classpath 'com.novoda:bintray-release:0.8.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.4'
 
 
@@ -37,7 +41,7 @@ ext {
     appTargetSdkVersion = 28
     versionCode = 1
     versionName = "1.6.0.1"//(internalTest)
-    appcompat = "androidx.appcompat:appcompat:1.0.0"
+    appcompat = "androidx.appcompat:appcompat:1.2.0"
 
     sdkSourceCompatibility = JavaVersion.VERSION_1_8
     sdkTargetCompatibility = JavaVersion.VERSION_1_8

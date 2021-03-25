@@ -2,6 +2,7 @@ package com.lixiaoxue.demolxx;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -18,8 +19,13 @@ import com.lixiaoxue.demolxx.fragment.GradleFragment;
 import com.lixiaoxue.demolxx.fragment.JavaFragment;
 import com.lixiaoxue.demolxx.fragment.MateralDesignFragment;
 import com.lixiaoxue.demolxx.fragment.WidgetFragment;
+import com.lixiaoxue.demolxx.room.AppDatabase;
+import com.lixiaoxue.demolxx.room.User;
+import com.lixiaoxue.demolxx.room.UserDao;
 import com.lixiaoxue.demolxx.widget.StatusBar;
 import com.nucarf.base.utils.LogUtils;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +56,32 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         initView();
+        AppDatabase appDatabase = DemoApplication.getDataBase();
+
+        UserDao userDao = appDatabase.userDao();
+        User user = new User();
+        user.uid = 4;
+        //user.lastName ="白";
+        user.firstName="读书";
+        //userDao.insertAll(user);
+        userDao.update(user);
+
+        List<User> userList = userDao.getAll();
+        if(userList != null){
+            for (int i = 0;i<userList.size();i++){
+                User user1 = userList.get(i);
+
+                LogUtils.e(user1.uid+"---"+user1.lastName+"----"+user1.firstName);
+            }
+        }else{
+            LogUtils.e("数据为null");
+        }
+
+        String currentDBPath=getDatabasePath("demo").getAbsolutePath();
+        LogUtils.e("currentDBPath="+currentDBPath);
+
+
+
 
 
 
@@ -184,4 +216,5 @@ public class MainActivity extends BaseActivity {
         super.onDestroy();
 
     }
+
 }

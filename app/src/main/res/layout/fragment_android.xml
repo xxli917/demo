@@ -6,12 +6,84 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/dp15"
+        >
+
+        <Button
+            android:id="@+id/start"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="数据存储 \n https://developer.android.google.cn/guide/topics/data"
-            android:textSize="20sp"/>
+            android:layout_height="wrap_content"
+            android:text="start"
+            />
+        <Button
+            android:id="@+id/open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开其他模块Activiy"
+            />
+        <Button
+            android:id="@+id/contentProvider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内容提供者"
+            />
+
+        <Button
+            android:id="@+id/service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务"
+            />
+        <Button
+            android:id="@+id/rxjava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rxjava"
+            />
+
+        <Button
+            android:id="@+id/recycler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recycler"
+            />
+
+        <Button
+            android:id="@+id/recycler1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recycler1"
+            />
+        <Button
+            android:id="@+id/recycler2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recycler2"
+            />
+        <Button
+            android:id="@+id/transtion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="过渡动画"
+            />
+
+        <Button
+            android:id="@+id/app_keep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应用保活"
+            />
+
+        <com.lixiaoxue.demolxx.widget.MyView
+            android:id="@+id/myView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/blue"
+            android:visibility="gone"
+            />
 
 
     </LinearLayout>

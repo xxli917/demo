@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 
@@ -154,5 +155,8 @@ public abstract class BaseActivity extends AppCompatActivity implements CustomAd
         return res;
     }
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return super.onKeyDown(keyCode, event);
+    }
 }

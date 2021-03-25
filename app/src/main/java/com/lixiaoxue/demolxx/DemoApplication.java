@@ -1,14 +1,20 @@
 package com.lixiaoxue.demolxx;
 
 import android.app.Application;
+import android.content.Intent;
 
 //import com.liys.doubleclicklibrary.DoubleClickHelper;
+import com.lixiaoxue.demolxx.android.RecycleActivity;
+import com.lixiaoxue.demolxx.room.AppDatabase;
 import com.nucarf.base.utils.BaseAppCache;
+import com.nucarf.base.utils.LogUtils;
 
+import androidx.room.Room;
 import me.jessyan.autosize.AutoSizeConfig;
 
 public class DemoApplication extends Application {
     public static DemoApplication mINSTANCE = null;
+    private static AppDatabase db =null;
 
     @Override
     public void onCreate() {
@@ -16,10 +22,21 @@ public class DemoApplication extends Application {
         mINSTANCE = this;
         configUnits();
         BaseAppCache.setContext(this);
+        int version = getApplicationInfo().targetSdkVersion;
+        LogUtils.e("---="+version);
+      //  Intent intent = new Intent(this, RecycleActivity.class);
+      //  startActivity(intent);
        /* DoubleClickHelper
                 .getInstance()
                 .delayTime(500);  //间隔时间
 */
+    }
+    public static AppDatabase getDataBase(){
+        if(db == null){
+            db = Room.databaseBuilder(mINSTANCE,
+                    AppDatabase.class, "demo.db").allowMainThreadQueries().build();
+        }
+        return db;
     }
     private void configUnits() {
         //AndroidAutoSize 默认开启对 dp 的支持, 调用 UnitsManager.setSupportDP(false); 可以关闭对 dp 的支持
@@ -51,5 +68,7 @@ public class DemoApplication extends Application {
         AutoSizeConfig.getInstance().setExcludeFontScale(true);
 
     }
+
+
 
 }

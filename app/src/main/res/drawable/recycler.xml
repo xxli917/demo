@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true" android:drawable="@drawable/f0f1f3_radius4_rect"/>
+
+    <item android:state_activated="false" android:drawable="@drawable/blue_radius4_rect"/>
+
+</selector>

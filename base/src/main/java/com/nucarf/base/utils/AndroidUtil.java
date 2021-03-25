@@ -405,4 +405,23 @@ public class AndroidUtil {
             context.startActivity(intent);
         }
 
+    /**
+     *  判断进程是否存活
+     */
+    public static boolean isProcessExist(Context context, int pid) {
+
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> lists ;
+        if (am != null) {
+            lists = am.getRunningAppProcesses();
+            for (ActivityManager.RunningAppProcessInfo appProcess : lists) {
+                if (appProcess.pid == pid) {
+                    Log.e("TAG","333333");
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lixiaoxue.demolxx">
-    <!-- 用于申请调用A-GPS模块 -->
+
     <application
         android:name=".DemoApplication"
         android:allowBackup="true"
@@ -10,7 +10,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".widget.SwipLoadActivity"></activity>
+        <activity
+            android:name=".keep.SinglePixelActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|navigation|keyboard"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/singleStyle"
+
+            />
+
+
+        <activity
+            android:name=".keep.AppKeepActivity"
+            android:label="@string/title_activity_app_keep"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".android.TranstionActivity" />
+        <activity android:name=".android.ScrollActivity" />
+
+        <activity android:name=".android.ServiceActivity" />
+        <activity android:name=".android.ContentProviderActivity" />
+        <activity android:name=".android.TestActivity" />
+        <activity android:name=".android.Recycler3Activity" />
+        <activity android:name=".android.Recycle1Activity" />
+        <activity android:name=".android.RecycleActivity" />
+        <activity android:name=".java.DataStructureActivity" />
+        <activity android:name=".android.RxJavaActivity" />
+        <activity android:name=".widget.SwipLoadActivity" />
         <activity android:name=".md.MySettingsActivity" />
         <activity android:name=".widget.AnimateActivity" />
         <activity android:name=".widget.MeituanActivity" />
@@ -46,19 +72,34 @@
             android:value="375" />
         <meta-data
             android:name="design_height"
-            android:value="667" /> <!-- 适配全面屏 -->
+            android:value="667" />
         <meta-data
             android:name="android.max_aspect"
-            android:value="2.4" /> <!-- 适配全面屏 -->
-        <!-- 适配华为刘海屏 -->
+            android:value="2.4" />
         <meta-data
             android:name="android.notch_support"
-            android:value="true" /> <!-- 适配华为（huawei）刘海屏 -->
-        <!-- 适配小米（xiaomi）刘海屏 -->
+            android:value="true" /> <!-- 适配全面屏 -->
         <meta-data
             android:name="notch.config"
-            android:value="portrait|landscape" />
-    </application> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+            android:value="portrait|landscape" /> <!-- 适配全面屏 -->
+        <!-- 适配华为刘海屏 -->
+        <!-- 适配华为（huawei）刘海屏 -->
+        <!-- 适配小米（xiaomi）刘海屏 -->
+        <service
+            android:name=".android.MyService"
+            android:description="@string/service"
+            android:exported="false" />
+        <service
+            android:name=".keep.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".keep.GrayService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".keep.PlayerMusicService" />
+    </application>
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -74,7 +115,11 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    //前台服务
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    //低电池
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
 </manifest>
